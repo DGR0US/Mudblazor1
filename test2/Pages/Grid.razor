@@ -1,0 +1,17 @@
+﻿@page "/Grid"
+
+<MudGrid Spacing="@spacing" Justify="Justify.Center">
+    <MudItem>
+        <MudPaper Height="140px" Width="140px" Style="background: #4A148C;" />
+    </MudItem>
+    <MudItem>
+        <MudPaper Height="140px" Width="140px" Style="background: #B71C1C;" />
+    </MudItem>
+    <MudItem>
+        <MudPaper Height="140px" Width="140px" Style="background: #3F51B5;" />
+    </MudItem>
+</MudGrid>
+
+@code {
+    public int spacing { get; set; } = 10;
+}

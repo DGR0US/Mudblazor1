@@ -1,0 +1,12 @@
+﻿@page "/Breadcrumbs"
+
+<MudBreadcrumbs Items="_items"></MudBreadcrumbs>
+
+@code {
+    private List<BreadcrumbItem> _items = new List<BreadcrumbItem>
+    {
+        new BreadcrumbItem("Youtube", href: "https://www.youtube.com/"),
+        new BreadcrumbItem("MudBlazor", href: "https://mudblazor.com/docs/overview"),
+        new BreadcrumbItem("Link 2", href: null, disabled: true)
+    };
+}
