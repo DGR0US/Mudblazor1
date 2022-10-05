@@ -1,0 +1,22 @@
+﻿@page "/Uploadpicture"
+
+<MudImage Src="images/defaultimg.jpg" Width="250" Height="250" Alt="image" Elevation="25" Class="rounded-lg mb-10"/>
+<br />
+<InputFile id="fileInput" OnChange="UploadFiles" hidden multiple />
+<MudFab HtmlTag="label"
+        Color="Color.Secondary"
+        Icon="@Icons.Filled.Image"
+        Label="Load picture"
+        for="fileInput" />
+
+@code {
+    IList<IBrowserFile> files = new List<IBrowserFile>();
+    private void UploadFiles(InputFileChangeEventArgs e)
+    {
+        foreach (var file in e.GetMultipleFiles())
+        {
+            files.Add(file);
+        }
+        //TODO upload the files to the server
+    }
+}
